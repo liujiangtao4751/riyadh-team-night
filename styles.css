@@ -63,6 +63,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .section-shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
 .hero { display: grid; grid-template-columns: 1.25fr .75fr; align-items: center; gap: 70px; min-height: 720px; padding: 95px 0 85px; }
 .eyebrow, .section-kicker { margin: 0 0 16px; color: var(--signal-dark); font-size: 12px; font-weight: 900; letter-spacing: .19em; }
+.org-path { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; width: fit-content; max-width: 100%; margin: 0 0 26px; padding: 9px 13px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: rgba(255,253,249,.48); font-size: 11px; font-weight: 700; }
+.org-path i { color: var(--signal); font-style: normal; }
+.org-path strong { color: var(--ink); }
 .hero h1 { margin: 0; font-size: clamp(62px, 8vw, 112px); line-height: .88; letter-spacing: -.075em; }
 .hero h1 span { color: var(--signal); }
 .hero-lead { max-width: 600px; margin: 34px 0 0; color: #45535d; font-size: 19px; line-height: 1.8; }
@@ -198,6 +201,7 @@ footer { display: flex; justify-content: space-between; gap: 20px; width: min(11
   .brand > span:last-child { display: none; }
   .hero { padding: 62px 0 55px; }
   .hero h1 { font-size: 61px; }
+  .org-path { gap: 6px; border-radius: 15px; line-height: 1.45; }
   .hero-lead { margin-top: 25px; font-size: 16px; }
   .hero-actions .button { flex: 1; }
   .event-pass { padding: 22px; }
