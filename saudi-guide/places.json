@@ -1,0 +1,841 @@
+{
+  "updated": "2026-09-08",
+  "placeVerified": "2026-09-07",
+  "office": {
+    "id": "office",
+    "label": "公司",
+    "name": "Windows Office",
+    "lat": 24.821698,
+    "lng": 46.6516289,
+    "address": "RAYD2804 · 8110 No. 88, Al Yasmeen, Riyadh 13322",
+    "source": "https://www.google.com/maps?cid=7055609746727916683",
+    "group": "公司",
+    "number": "C"
+  },
+  "places": [
+    {
+      "id": "ascott",
+      "label": "Ascott 酒店",
+      "name": "Ascott Rafal Riyadh",
+      "lat": 24.808857,
+      "lng": 46.626529,
+      "address": "7706 Sahafa Olaya Street, Riyadh 13321",
+      "source": "https://www.capitaland.com/en/find-a-property/global-property-listing/lodging/ascott-rafal-olaya-riyadh.html",
+      "group": "住宿",
+      "number": "1"
+    },
+    {
+      "id": "aber",
+      "label": "Aber 酒店",
+      "name": "Aber Al Yasmeen Hotel",
+      "lat": 24.8204539,
+      "lng": 46.6484943,
+      "address": "Anas Ibn Malik Road · Al Yasmeen, Riyadh",
+      "source": "https://www.google.com/maps?cid=4672329605518746001",
+      "group": "住宿",
+      "number": "2"
+    },
+    {
+      "id": "crt",
+      "label": "CRT 体检",
+      "name": "CRT Diagnostic Center",
+      "lat": 24.7009994,
+      "lng": 46.6675541,
+      "address": "7487 Al Takhassousi · Al Olaya, Riyadh 12333",
+      "source": "https://www.waze.com/live-map/directions/sa/riyadh-province/riyadh/crt-diagnostic-center?to=place.ChIJ_0VDVNQcLz4R54H2hpK-keQ",
+      "group": "办事",
+      "number": "3"
+    },
+    {
+      "id": "stc",
+      "label": "STC 换绑",
+      "name": "stc store · Al Aarid",
+      "lat": 24.8326,
+      "lng": 46.626995,
+      "address": "RJMG+2Q · Al Aarid, Diriyah 13331",
+      "source": "https://maps.app.goo.gl/fMdSStBDotpZMWPW6?g_st=ic",
+      "group": "办事",
+      "number": "4"
+    },
+    {
+      "id": "absher",
+      "label": "Absher 终端",
+      "name": "RAYA7140 · Absher 办理点",
+      "lat": 24.8201772,
+      "lng": 46.6425409,
+      "address": "7140 King Abdulaziz Road · Al Yasmeen, Riyadh 13325",
+      "source": "https://www.google.com/maps?cid=8614060229661383284",
+      "group": "办事",
+      "number": "5",
+      "note": "用户提供的终端位置；地图实体为门牌地址，出发前核实终端是否可用。"
+    },
+    {
+      "id": "sab",
+      "label": "SAB 银行",
+      "name": "SAB · Al Ghadeer Branch",
+      "lat": 24.7788942,
+      "lng": 46.6633405,
+      "address": "King Abdulaziz Road · Al Ghadir, Riyadh 13311",
+      "source": "https://goo.gl/maps/UQmhntrgWz5jTvLy6",
+      "group": "办事",
+      "number": "6"
+    },
+    {
+      "id": "yolan",
+      "label": "悦澜公寓",
+      "name": "悦澜国际公寓 · Yolan",
+      "lat": 24.803,
+      "lng": 46.59625,
+      "address": "RRMA7822 · Al Amasi, Al Malqa, Riyadh",
+      "source": "https://www.google.com/maps?cid=10897697400888263697",
+      "group": "住宿",
+      "number": "7"
+    }
+  ],
+  "routes": {
+    "ascott": {
+      "fromOffice": {
+        "distance": 5384.7,
+        "duration": 328.5,
+        "geometry": {
+          "coordinates": [
+            [
+              46.651486,
+              24.821634
+            ],
+            [
+              46.651226,
+              24.82211
+            ],
+            [
+              46.656283,
+              24.824363
+            ],
+            [
+              46.659559,
+              24.825606
+            ],
+            [
+              46.66066,
+              24.826116
+            ],
+            [
+              46.660741,
+              24.826299
+            ],
+            [
+              46.660538,
+              24.826408
+            ],
+            [
+              46.658082,
+              24.825428
+            ],
+            [
+              46.647033,
+              24.820625
+            ],
+            [
+              46.625513,
+              24.811599
+            ],
+            [
+              46.626841,
+              24.808981
+            ]
+          ],
+          "type": "LineString"
+        },
+        "source": "https://router.project-osrm.org/route/v1/driving/46.6516289,24.821698;46.626529,24.808857?overview=simplified&geometries=geojson",
+        "snapDistances": [
+          16.10096608,
+          34.40192364
+        ]
+      },
+      "toOffice": {
+        "distance": 3914.1,
+        "duration": 313.8,
+        "geometry": {
+          "coordinates": [
+            [
+              46.626841,
+              24.808981
+            ],
+            [
+              46.626985,
+              24.808681
+            ],
+            [
+              46.624072,
+              24.807548
+            ],
+            [
+              46.622723,
+              24.810261
+            ],
+            [
+              46.651226,
+              24.82211
+            ],
+            [
+              46.651486,
+              24.821634
+            ]
+          ],
+          "type": "LineString"
+        },
+        "source": "https://router.project-osrm.org/route/v1/driving/46.626529,24.808857;46.6516289,24.821698?overview=simplified&geometries=geojson",
+        "snapDistances": [
+          34.40192364,
+          16.10096608
+        ]
+      }
+    },
+    "aber": {
+      "fromOffice": {
+        "distance": 701.6,
+        "duration": 176.1,
+        "geometry": {
+          "coordinates": [
+            [
+              46.651486,
+              24.821634
+            ],
+            [
+              46.65161,
+              24.821406
+            ],
+            [
+              46.650469,
+              24.820939
+            ],
+            [
+              46.651048,
+              24.819791
+            ],
+            [
+              46.650339,
+              24.819489
+            ],
+            [
+              46.649743,
+              24.820673
+            ],
+            [
+              46.648389,
+              24.82009
+            ],
+            [
+              46.648255,
+              24.820354
+            ]
+          ],
+          "type": "LineString"
+        },
+        "source": "https://router.project-osrm.org/route/v1/driving/46.6516289,24.821698;46.6484943,24.8204539?overview=simplified&geometries=geojson",
+        "snapDistances": [
+          16.10096608,
+          26.57933257
+        ]
+      },
+      "toOffice": {
+        "distance": 463.1,
+        "duration": 43.6,
+        "geometry": {
+          "coordinates": [
+            [
+              46.648255,
+              24.820354
+            ],
+            [
+              46.648048,
+              24.820763
+            ],
+            [
+              46.651226,
+              24.82211
+            ],
+            [
+              46.651486,
+              24.821634
+            ]
+          ],
+          "type": "LineString"
+        },
+        "source": "https://router.project-osrm.org/route/v1/driving/46.6484943,24.8204539;46.6516289,24.821698?overview=simplified&geometries=geojson",
+        "snapDistances": [
+          26.57933257,
+          16.10096608
+        ]
+      }
+    },
+    "crt": {
+      "fromOffice": {
+        "distance": 19848.9,
+        "duration": 1032.2,
+        "geometry": {
+          "coordinates": [
+            [
+              46.651486,
+              24.821634
+            ],
+            [
+              46.660741,
+              24.826299
+            ],
+            [
+              46.622113,
+              24.810141
+            ],
+            [
+              46.67671,
+              24.702097
+            ],
+            [
+              46.668616,
+              24.698461
+            ],
+            [
+              46.6674,
+              24.700935
+            ]
+          ],
+          "type": "LineString"
+        },
+        "source": "https://router.project-osrm.org/route/v1/driving/46.6516289,24.821698;46.6675541,24.7009994?overview=simplified&geometries=geojson",
+        "snapDistances": [
+          16.10096608,
+          17.11771611
+        ]
+      },
+      "toOffice": {
+        "distance": 17020.1,
+        "duration": 913.4,
+        "geometry": {
+          "coordinates": [
+            [
+              46.6674,
+              24.700935
+            ],
+            [
+              46.663961,
+              24.708072
+            ],
+            [
+              46.672248,
+              24.712115
+            ],
+            [
+              46.622723,
+              24.810261
+            ],
+            [
+              46.651486,
+              24.821634
+            ]
+          ],
+          "type": "LineString"
+        },
+        "source": "https://router.project-osrm.org/route/v1/driving/46.6675541,24.7009994;46.6516289,24.821698?overview=simplified&geometries=geojson",
+        "snapDistances": [
+          17.11771611,
+          16.10096608
+        ]
+      }
+    },
+    "stc": {
+      "fromOffice": {
+        "distance": 5993.6,
+        "duration": 366.4,
+        "geometry": {
+          "coordinates": [
+            [
+              46.651486,
+              24.821634
+            ],
+            [
+              46.651226,
+              24.82211
+            ],
+            [
+              46.656283,
+              24.824363
+            ],
+            [
+              46.659559,
+              24.825606
+            ],
+            [
+              46.66066,
+              24.826116
+            ],
+            [
+              46.660741,
+              24.826299
+            ],
+            [
+              46.660538,
+              24.826408
+            ],
+            [
+              46.659512,
+              24.826009
+            ],
+            [
+              46.643593,
+              24.81933
+            ],
+            [
+              46.635297,
+              24.83578
+            ],
+            [
+              46.62736,
+              24.832502
+            ],
+            [
+              46.627189,
+              24.832746
+            ],
+            [
+              46.62705,
+              24.832533
+            ]
+          ],
+          "type": "LineString"
+        },
+        "source": "https://router.project-osrm.org/route/v1/driving/46.6516289,24.821698;46.626995,24.8326?overview=simplified&geometries=geojson",
+        "snapDistances": [
+          16.10096608,
+          9.273344722
+        ]
+      },
+      "toOffice": {
+        "distance": 7096.3,
+        "duration": 584.5,
+        "geometry": {
+          "coordinates": [
+            [
+              46.62705,
+              24.832533
+            ],
+            [
+              46.622052,
+              24.830266
+            ],
+            [
+              46.620513,
+              24.833161
+            ],
+            [
+              46.62629,
+              24.835659
+            ],
+            [
+              46.623392,
+              24.841397
+            ],
+            [
+              46.630522,
+              24.844285
+            ],
+            [
+              46.643628,
+              24.818875
+            ],
+            [
+              46.651226,
+              24.82211
+            ],
+            [
+              46.651486,
+              24.821634
+            ]
+          ],
+          "type": "LineString"
+        },
+        "source": "https://router.project-osrm.org/route/v1/driving/46.626995,24.8326;46.6516289,24.821698?overview=simplified&geometries=geojson",
+        "snapDistances": [
+          9.273344722,
+          16.10096608
+        ]
+      }
+    },
+    "absher": {
+      "fromOffice": {
+        "distance": 3591.3,
+        "duration": 268.2,
+        "geometry": {
+          "coordinates": [
+            [
+              46.651486,
+              24.821634
+            ],
+            [
+              46.651226,
+              24.82211
+            ],
+            [
+              46.656283,
+              24.824363
+            ],
+            [
+              46.659559,
+              24.825606
+            ],
+            [
+              46.66066,
+              24.826116
+            ],
+            [
+              46.660741,
+              24.826299
+            ],
+            [
+              46.660538,
+              24.826408
+            ],
+            [
+              46.658082,
+              24.825428
+            ],
+            [
+              46.655746,
+              24.824351
+            ],
+            [
+              46.651015,
+              24.822459
+            ],
+            [
+              46.642606,
+              24.818925
+            ],
+            [
+              46.641666,
+              24.82081
+            ],
+            [
+              46.64233,
+              24.821074
+            ],
+            [
+              46.642773,
+              24.820217
+            ],
+            [
+              46.642541,
+              24.820177
+            ]
+          ],
+          "type": "LineString"
+        },
+        "source": "https://router.project-osrm.org/route/v1/driving/46.6516289,24.821698;46.6425409,24.8201772?overview=simplified&geometries=geojson",
+        "snapDistances": [
+          16.10096608,
+          0
+        ]
+      },
+      "toOffice": {
+        "distance": 1700.5,
+        "duration": 179.5,
+        "geometry": {
+          "coordinates": [
+            [
+              46.642541,
+              24.820177
+            ],
+            [
+              46.642588,
+              24.820185
+            ],
+            [
+              46.642622,
+              24.820145
+            ],
+            [
+              46.642773,
+              24.820217
+            ],
+            [
+              46.643127,
+              24.81959
+            ],
+            [
+              46.643205,
+              24.819325
+            ],
+            [
+              46.64309,
+              24.819166
+            ],
+            [
+              46.642606,
+              24.818925
+            ],
+            [
+              46.641666,
+              24.82081
+            ],
+            [
+              46.64233,
+              24.821074
+            ],
+            [
+              46.642885,
+              24.820271
+            ],
+            [
+              46.643628,
+              24.818875
+            ],
+            [
+              46.651226,
+              24.82211
+            ],
+            [
+              46.651486,
+              24.821634
+            ]
+          ],
+          "type": "LineString"
+        },
+        "source": "https://router.project-osrm.org/route/v1/driving/46.6425409,24.8201772;46.6516289,24.821698?overview=simplified&geometries=geojson",
+        "snapDistances": [
+          0,
+          16.10096608
+        ]
+      }
+    },
+    "sab": {
+      "fromOffice": {
+        "distance": 9419.9,
+        "duration": 569.7,
+        "geometry": {
+          "coordinates": [
+            [
+              46.651486,
+              24.821634
+            ],
+            [
+              46.651226,
+              24.82211
+            ],
+            [
+              46.652929,
+              24.822909
+            ],
+            [
+              46.66144,
+              24.826278
+            ],
+            [
+              46.677755,
+              24.79425
+            ],
+            [
+              46.677526,
+              24.793795
+            ],
+            [
+              46.662608,
+              24.787499
+            ],
+            [
+              46.661098,
+              24.786165
+            ],
+            [
+              46.659311,
+              24.785566
+            ],
+            [
+              46.657325,
+              24.785351
+            ],
+            [
+              46.653668,
+              24.783639
+            ],
+            [
+              46.654876,
+              24.783857
+            ],
+            [
+              46.65782,
+              24.785208
+            ],
+            [
+              46.660232,
+              24.785342
+            ],
+            [
+              46.663627,
+              24.779046
+            ],
+            [
+              46.663428,
+              24.778716
+            ]
+          ],
+          "type": "LineString"
+        },
+        "source": "https://router.project-osrm.org/route/v1/driving/46.6516289,24.821698;46.6633405,24.7788942?overview=simplified&geometries=geojson",
+        "snapDistances": [
+          16.10096608,
+          21.59107137
+        ]
+      },
+      "toOffice": {
+        "distance": 12353.6,
+        "duration": 742.7,
+        "geometry": {
+          "coordinates": [
+            [
+              46.663428,
+              24.778716
+            ],
+            [
+              46.667761,
+              24.77014
+            ],
+            [
+              46.652244,
+              24.763362
+            ],
+            [
+              46.6487,
+              24.763102
+            ],
+            [
+              46.646258,
+              24.764081
+            ],
+            [
+              46.622723,
+              24.810261
+            ],
+            [
+              46.651226,
+              24.82211
+            ],
+            [
+              46.651486,
+              24.821634
+            ]
+          ],
+          "type": "LineString"
+        },
+        "source": "https://router.project-osrm.org/route/v1/driving/46.6633405,24.7788942;46.6516289,24.821698?overview=simplified&geometries=geojson",
+        "snapDistances": [
+          21.59107137,
+          16.10096608
+        ]
+      }
+    },
+    "yolan": {
+      "fromOffice": {
+        "distance": 8721.6,
+        "duration": 543.8,
+        "geometry": {
+          "coordinates": [
+            [
+              46.651486,
+              24.821634
+            ],
+            [
+              46.651226,
+              24.82211
+            ],
+            [
+              46.660741,
+              24.826299
+            ],
+            [
+              46.658082,
+              24.825428
+            ],
+            [
+              46.598082,
+              24.800085
+            ],
+            [
+              46.596009,
+              24.803982
+            ],
+            [
+              46.596343,
+              24.80304
+            ]
+          ],
+          "type": "LineString"
+        },
+        "source": "https://router.project-osrm.org/route/v1/driving/46.6516289,24.821698;46.59625,24.803?overview=simplified&geometries=geojson",
+        "snapDistances": [
+          16.10096608,
+          10.39338288
+        ]
+      },
+      "toOffice": {
+        "distance": 7257.4,
+        "duration": 550.5,
+        "geometry": {
+          "coordinates": [
+            [
+              46.596343,
+              24.80304
+            ],
+            [
+              46.597799,
+              24.800209
+            ],
+            [
+              46.596779,
+              24.80247
+            ],
+            [
+              46.597498,
+              24.802776
+            ],
+            [
+              46.598345,
+              24.801083
+            ],
+            [
+              46.601628,
+              24.802458
+            ],
+            [
+              46.601999,
+              24.80171
+            ],
+            [
+              46.600517,
+              24.801087
+            ],
+            [
+              46.600643,
+              24.800917
+            ],
+            [
+              46.651226,
+              24.82211
+            ],
+            [
+              46.651486,
+              24.821634
+            ]
+          ],
+          "type": "LineString"
+        },
+        "source": "https://router.project-osrm.org/route/v1/driving/46.59625,24.803;46.6516289,24.821698?overview=simplified&geometries=geojson",
+        "snapDistances": [
+          10.39338288,
+          16.10096608
+        ]
+      }
+    }
+  },
+  "routeProvider": "OSRM / OpenStreetMap",
+  "routeNote": "静态道路路线与无实时路况的模型时间，不含停车、步行及排队；实际路线和车程以 Google Maps 当次导航为准。"
+}

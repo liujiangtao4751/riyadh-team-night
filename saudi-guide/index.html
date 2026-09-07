@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#153c38">
+  <meta name="description" content="初到利雅得，外派落地办事指南。以 Windows Office 为中心，查酒店、手机卡、Iqama、Absher、驾照、银行和租房，点开地图即可导航。">
+  <title>初到利雅得 · 沙特外派落地指南</title>
+  <link rel="stylesheet" href="./vendor/leaflet.css">
+  <link rel="stylesheet" href="./styles.css?v=20260908a">
+  <script src="./vendor/leaflet.js" defer></script>
+  <script src="./app.js?v=20260908a" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#guide">跳到办事清单</a>
+  <header class="site-header">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">SA</span><span>RIYADH <span class="brand-light">/ FIELD GUIDE</span></span></a>
+    <a class="header-link" href="#map-section">查看地图 <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top" class="page">
+    <div class="page-heading">
+      <div><p class="eyebrow">沙特外派落地指南</p><h1>初到利雅得<span class="title-dot">.</span></h1><p class="intro">从落地到安顿，把要办的事一件件办好。</p></div>
+      <p class="edition"><span>RIYADH · UTC+3</span><br>更新于 2026.09.08</p>
+    </div>
+
+    <nav class="journey" aria-label="按办理阶段跳转">
+      <a href="#hotels"><span class="phase-number">01</span><span><strong>先住下来</strong><small>酒店 · 手机卡</small></span><span aria-hidden="true">↗</span></a>
+      <a href="#iqama"><span class="phase-number">02</span><span><strong>拿到 Iqama</strong><small>体检 · 保险</small></span><span aria-hidden="true">↗</span></a>
+      <a href="#sim"><span class="phase-number">03</span><span><strong>开通身份服务</strong><small>换绑 · Absher · Nafath</small></span><span aria-hidden="true">↗</span></a>
+      <a href="#license"><span class="phase-number">04</span><span><strong>安顿日常</strong><small>驾照 · 银行 · 租房</small></span><span aria-hidden="true">↗</span></a>
+    </nav>
+
+    <div class="workspace">
+      <aside class="map-column" aria-label="地点和导航">
+        <section id="office" class="office-card">
+          <div class="office-top"><span class="office-label"><span class="office-beacon" aria-hidden="true"></span>所有路线的中心</span><span class="office-code">C / OFFICE</span></div>
+          <h2>Windows Office</h2>
+          <p>Al Yasmeen · Riyadh</p>
+          <div class="office-actions"><a class="button button-lime" href="https://www.google.com/maps/dir/?api=1&amp;destination=24.821698,46.6516289&amp;travelmode=driving" target="_blank" rel="noopener">导航到公司 <span aria-hidden="true">↗</span></a><button class="office-copy" type="button" data-copy-office>复制地址</button></div>
+          <p class="office-address">RAYD2804 · 8110 No. 88, Riyadh 13322</p>
+        </section>
+
+        <section id="map-section" class="map-panel">
+          <div class="section-head"><div><p class="eyebrow">PLACES & ROUTES</p><h2>办事地图</h2></div><span class="pill">8 个地点</span></div>
+          <div class="route-controls">
+            <label for="place-select">选择地点</label>
+            <select id="place-select">
+              <option value="ascott">1 · Ascott Rafal Riyadh</option><option value="aber">2 · Aber Al Yasmeen Hotel</option><option value="crt">3 · CRT Diagnostic Center</option><option value="stc">4 · STC Al Aarid 营业厅</option><option value="absher">5 · Absher 终端 / RAYA7140</option><option value="sab">6 · SAB Al Ghadeer Branch</option><option value="yolan">7 · 悦澜国际公寓</option>
+            </select>
+            <div class="direction-switch" role="group" aria-label="路线方向"><button type="button" data-direction="toOffice" aria-pressed="true">地点 → 公司</button><button type="button" data-direction="fromOffice" aria-pressed="false">公司 → 地点</button></div>
+          </div>
+          <div class="map-wrap"><div id="map" role="region" aria-label="利雅得办事地点交互地图"><p class="map-fallback">地图正在载入。也可使用下方事项的 Google Maps 导航按钮。</p></div><button type="button" id="map-reset" class="map-reset" aria-label="地图回到公司中心">公司居中</button><button type="button" id="map-drag" class="map-drag" aria-pressed="false">开启地图拖动</button></div>
+          <div id="route-detail" class="route-detail" aria-live="polite"><p class="route-caption">Ascott Rafal Riyadh → 公司</p><div class="route-stats"><strong>3.9 <small>km</small></strong><span class="stat-divider"></span><strong>约 6 <small>分钟</small></strong></div><p class="route-model">自驾模型参考 · 不含实时拥堵</p><a class="button button-dark full-width" id="route-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=24.808857,46.626529&amp;destination=24.821698,46.6516289&amp;travelmode=driving" target="_blank" rel="noopener">在 Google Maps 打开路线 ↗</a></div>
+          <p class="map-help" id="map-help">点编号可选地点并导航。手机上默认单指上下滑动页面，点“开启地图拖动”后可平移地图。出发前查看实时车程和营业时间。</p>
+        </section>
+        <div class="map-note"><span aria-hidden="true">i</span><p>机场按机票选择航站楼，驾照按 Absher 实际预约网点导航；未指定的网点不在地图中代选。</p></div>
+      </aside>
+
+      <section class="guide-column" id="guide" aria-label="落地办事清单">
+        <div class="guide-heading"><div><p class="eyebrow">YOUR ARRIVAL CHECKLIST</p><h2>这 8 件事，按顺序来</h2></div><span class="guide-counter">01 — 08</span></div>
+        <p class="guide-note">住宿可以提前订；手机卡落地即办。Iqama 到手后，再接上身份、银行与驾照服务。下方时间均为办理经验或注明的官方信息。</p>
+
+        <article id="hotels" class="task-card">
+          <div class="task-title"><span class="task-number">01</span><div><span class="task-stage">抵达前 / 住宿</span><h3>先选一家落脚的酒店</h3></div></div>
+          <div class="hotel-option"><div class="place-heading"><h4>Ascott Rafal Riyadh</h4><span class="tag green">优先考虑</span></div><p>早餐品类多，泳池大；想住得舒服些，可以先看这里。</p><p class="experience">个人入住体验 · 房价与设施开放时间以酒店当日确认为准</p><div class="place-footer"><span class="distance" data-distance="ascott">到公司 · 3.9 km / 参考 6 分钟</span><div class="place-buttons"><button type="button" class="map-button" data-map="ascott">地图定位</button><a class="nav-link" data-nav="ascott" href="https://www.google.com/maps/dir/?api=1&amp;origin=24.821698,46.6516289&amp;destination=24.808857,46.626529&amp;travelmode=driving" target="_blank" rel="noopener">导航去酒店 ↗</a></div></div><a class="source-link" href="https://www.discoverasr.com/en/ascott-the-residence/saudi-arabia/ascott-rafal-olaya-riyadh" target="_blank" rel="noopener">酒店官网 / 预订 ↗</a></div>
+          <div class="hotel-option"><div class="place-heading"><h4>Aber Al Yasmeen Hotel</h4><span class="tag">步行通勤</span></div><p>到公司步行约 5 分钟。早餐选择较少；泳池、健身房曾在 20:00 关闭，晚归使用前先问前台。</p><p class="experience">个人入住与步行经验 · 地图所示为 Al Yasmeen 分店</p><div class="place-footer"><span class="distance" data-distance="aber">到公司 · 0.5 km / 参考 1 分钟</span><div class="place-buttons"><button type="button" class="map-button" data-map="aber">地图定位</button><a class="nav-link" data-nav="aber" href="https://www.google.com/maps/dir/?api=1&amp;origin=24.821698,46.6516289&amp;destination=24.8204539,46.6484943&amp;travelmode=driving" target="_blank" rel="noopener">导航去酒店 ↗</a></div></div><div class="inline-links"><a class="source-link" href="https://boudl.com/en/hotel/aber-al-yasmin-hotel" target="_blank" rel="noopener">酒店官网 / 预订 ↗</a><a class="source-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=24.8204539,46.6484943&amp;destination=24.821698,46.6516289&amp;travelmode=walking" target="_blank" rel="noopener">步行去公司 ↗</a></div></div>
+        </article>
+
+        <article id="arrival" class="task-card">
+          <div class="task-title"><span class="task-number">02</span><div><span class="task-stage">落地当天 / 通信</span><h3>出关后，办好第一张手机卡</h3></div></div>
+          <p>在利雅得机场到达大厅寻找 STC 柜台，用护照办理访客套餐，先解决上网和接收短信。</p>
+          <div class="price-strip"><div><small>STC Sawa Visitor 86</small><strong>100 <span>SAR / 含税</span></strong></div><span class="tag green">官网价</span></div>
+          <p class="compact">当前官网：50 GB、5 小时指定范围通话，有效期 4 周；优惠截至 2026.09.28。含税总价及套餐内容以购买时确认为准。</p>
+          <details><summary>到柜台时确认什么<span aria-hidden="true">＋</span></summary><div class="detail-body"><ul><li>确认套餐含税总价、有效期和开通时间。</li><li>现场测试上网、短信，保存号码及办理凭证。</li><li>机场柜台位置按实际到达航站楼确认；拿到 Iqama 后还要更新号码登记身份。</li></ul></div></details>
+          <div class="card-actions"><a class="button button-outline" href="https://www.stc.com.sa/en/personal/mobile/packages/sawa-ziyara.html" target="_blank" rel="noopener">查看官方套餐 ↗</a><a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=King+Khalid+International+Airport" target="_blank" rel="noopener">机场地图 ↗</a></div>
+        </article>
+
+        <article id="iqama" class="task-card">
+          <div class="task-title"><span class="task-number">03</span><div><span class="task-stage">抵达后 / 居留身份</span><h3>体检、保险，跟进 Iqama</h3></div></div>
+          <p class="place-kicker">CRT Diagnostic Center</p>
+          <p>去 CRT 完成入职 / 居留所需体检，再填写 HR 提供的保险表，联系 <strong>Suha Alshehri</strong> 跟进保险缴费与后续办理。</p>
+          <div class="fact-row"><span><strong>约 10 分钟</strong><small>个人现场体检经历</small></span><span><strong>约 3 个工作日</strong><small>曾拿到 Iqama 号的时间</small></span></div>
+          <p class="experience">上述不是承诺时效。体检项目、材料、保险及 Iqama 进度，以 HR 和实际办理结果为准。</p>
+          <details><summary>去之前与办完后<span aria-hidden="true">＋</span></summary><div class="detail-body"><ul><li>向 HR 确认指定机构、所需证件及是否有检查前准备要求。</li><li>提交 HR 的保险表后，确认保险缴费与信息登记已完成。</li><li>跟进 Iqama 号码，后续手机号换绑、身份 App、开户都需要它。</li></ul></div></details>
+          <div class="place-footer"><span class="distance" data-distance="crt">到公司 · 17.0 km / 参考 16 分钟</span><div class="place-buttons"><button type="button" class="map-button" data-map="crt">地图定位</button><a class="nav-link" data-nav="crt" href="https://www.google.com/maps/dir/?api=1&amp;origin=24.821698,46.6516289&amp;destination=24.7009994,46.6675541&amp;travelmode=driving" target="_blank" rel="noopener">导航去体检 ↗</a></div></div>
+        </article>
+
+        <article id="sim" class="task-card">
+          <div class="task-title"><span class="task-number">04</span><div><span class="task-stage">Iqama 到手 / 手机号</span><h3>把手机号从护照换绑到 Iqama</h3></div></div>
+          <p class="place-kicker">STC Store · Al Aarid / Quartz Shopping Center</p>
+          <p>带护照、Iqama 及正在使用的手机，到指定 STC 营业厅申请更新号码登记身份。</p>
+          <div class="fact-row"><span><strong>约 1 小时</strong><small>个人排队经验</small></span><span><strong>当次未收费</strong><small>曾到店录指纹办理</small></span></div>
+          <p class="experience">门店较热门，预留排队时间。认证方式、材料、是否涉及补卡或套餐费用，请当次向店员确认。</p>
+          <details><summary>办完再离店<span aria-hidden="true">＋</span></summary><div class="detail-body"><p>请店员确认原号码已登记到本人 Iqama，并核对原套餐及余额如何保留，测试短信与上网。此网点来自提供的原始地图链接。</p><a class="source-link" href="https://maps.app.goo.gl/fMdSStBDotpZMWPW6?g_st=ic" target="_blank" rel="noopener">查看指定 STC 门店 ↗</a></div></details>
+          <div class="place-footer"><span class="distance" data-distance="stc">到公司 · 7.1 km / 参考 10 分钟</span><div class="place-buttons"><button type="button" class="map-button" data-map="stc">地图定位</button><a class="nav-link" data-nav="stc" href="https://www.google.com/maps/dir/?api=1&amp;origin=24.821698,46.6516289&amp;destination=24.8326,46.626995&amp;travelmode=driving" target="_blank" rel="noopener">导航去换绑 ↗</a></div></div>
+        </article>
+
+        <article id="identity" class="task-card">
+          <div class="task-title"><span class="task-number">05</span><div><span class="task-stage">身份服务 / 后续办理的入口</span><h3>激活 Absher，登录 Nafath</h3></div></div>
+          <p class="place-kicker">线下参考点：RAYA7140 · Al Yasmeen</p>
+          <ol class="mini-steps"><li><span>1</span><p>在 <a href="https://www.absher.sa/" target="_blank" rel="noopener">Absher 官网</a>注册个人账户。</p></li><li><span>2</span><p>按个人办理经验，前往 RAYA7140 的终端录指纹、激活账户。</p></li><li><span>3</span><p>下载官方 <strong>Absher</strong> 和 <strong>Nafath</strong> App，以 Iqama 号及相应登录凭据操作；Nafath 按提示完成短信及生物识别验证。</p></li></ol>
+          <div class="callout"><strong>先看看能否在线激活</strong><p>Nafath 官方手册已提供 App 内 Absher 自助激活方式；银行、终端和网点也是可选渠道。可用方式以自己的账户页面为准。</p></div>
+          <p class="experience">RAYA7140 已核实到门牌坐标，终端存在及可用情况属于个人办理经验，出发前核实。</p>
+          <div class="card-actions"><a class="button button-outline" href="https://www.absher.sa/" target="_blank" rel="noopener">Absher 官方入口 ↗</a><a class="text-link" href="https://www.iam.gov.sa/guides/userGuideEn.pdf" target="_blank" rel="noopener">Nafath 官方指南 ↗</a></div>
+          <div class="place-footer"><span class="distance" data-distance="absher">到公司 · 1.7 km / 参考 3 分钟</span><div class="place-buttons"><button type="button" class="map-button" data-map="absher">地图定位</button><a class="nav-link" data-nav="absher" href="https://www.google.com/maps/dir/?api=1&amp;origin=24.821698,46.6516289&amp;destination=24.8201772,46.6425409&amp;travelmode=driving" target="_blank" rel="noopener">导航去终端 ↗</a></div></div>
+        </article>
+
+        <article id="license" class="task-card">
+          <div class="task-title"><span class="task-number">06</span><div><span class="task-stage">Absher 可用后 / 驾照</span><h3>准备翻译与体检，再预约办理</h3></div></div>
+          <p>先确认自己的外国驾照是否符合换领条件。个人办理渠道：联系 <strong>Atef Zenhom</strong>，询问翻译件和体检安排。</p>
+          <div class="fact-row"><span><strong>约 200 SAR</strong><small>个人渠道报价 · 翻译＋体检</small></span><span><strong>约 2 天</strong><small>预计拿到电子材料</small></span></div>
+          <p>拿到电子文件后，在 Absher 选择交通预约 / 对应驾照服务，按系统要求选网点、上传或携带材料。</p>
+          <div class="callout amber"><strong>预约名额，要以系统为准</strong><p>个人经验：公司约 10 km 范围的两个点常无名额。有“周四 12:00、13:00、15:00 前后试刷”的说法，<strong>未获官方证实</strong>，不能当固定放号时间。具体网点以预约结果为准。</p></div>
+          <details><summary>费用与材料怎么分开看<span aria-hidden="true">＋</span></summary><div class="detail-body"><ul><li>私家车驾照政府年费为 40 SAR，2 年期为 80 SAR；与翻译、体检费用分开。</li><li>可通过 SAB 的政府缴费渠道按实际账单缴纳；服务、证件号和年期核对无误后再付。</li><li>翻译机构是否被认可、是否需考试及材料有效期，向受理网点确认。200 SAR / 2 天是个人渠道信息，不是官方统一收费或时限。</li></ul><a class="source-link" href="https://www.moi.gov.sa/wps/wcm/connect/d7325b50-34ac-4bcc-a842-5eafacb4a8c6/rt_policy.pdf?CVID=lDGuFnz&amp;MOD=AJPERES" target="_blank" rel="noopener">内政部官方驾照费表 ↗</a></div></details>
+          <div class="card-actions"><a class="button button-outline" href="https://www.absher.sa/wps/portal/traffic/Home/tf-book-appointment/" target="_blank" rel="noopener">进入交通预约 ↗</a><span class="minor">导航以实际预约网点为准</span></div>
+        </article>
+
+        <article id="bank" class="task-card">
+          <div class="task-title"><span class="task-number">07</span><div><span class="task-stage">Iqama / 身份服务就绪 / 银行</span><h3>SAB 开户，再领取实体卡</h3></div></div>
+          <p class="place-kicker">Riyadh · Al Ghadeer Branch / SAB الأول</p>
+          <p>下载 SAB 官方 App，或从官方数字开户入口申请。选择 <strong>Riyadh → Al Ghadeer Branch</strong>，按流程在 Nafath 确认认证请求。</p>
+          <div class="requirements"><span>有效 Iqama</span><span>已激活 Absher</span><span>本人名下手机号</span><span>National Address</span></div>
+          <p>开户完成后，个人经验是约两天后去该分行申请实体卡；也可查看当时是否支持自助机打印或邮寄。</p>
+          <p class="experience">“两天后到店”为经验安排，不是银行承诺。先确认开户成功及领卡方式，再去分行。</p>
+          <div class="card-actions"><a class="button button-outline" href="https://www.sab.com/en/personal/ways-to-bank/e-account-opening/" target="_blank" rel="noopener">SAB 官方开户 ↗</a><a class="text-link" href="https://www.sab.com/en/personal/ways-to-bank/sab-mobile/" target="_blank" rel="noopener">下载官方 App ↗</a></div>
+          <div class="place-footer"><span class="distance" data-distance="sab">到公司 · 12.4 km / 参考 13 分钟</span><div class="place-buttons"><button type="button" class="map-button" data-map="sab">地图定位</button><a class="nav-link" data-nav="sab" href="https://www.google.com/maps/dir/?api=1&amp;origin=24.821698,46.6516289&amp;destination=24.7788942,46.6633405&amp;travelmode=driving" target="_blank" rel="noopener">导航去分行 ↗</a></div></div>
+        </article>
+
+        <article id="rent" class="task-card">
+          <div class="task-title"><span class="task-number">08</span><div><span class="task-stage">安顿下来 / 长住</span><h3>看房：悦澜国际公寓</h3></div></div>
+          <p class="place-kicker">Yolan International Apartments · Al Malqa</p>
+          <p>公司有不少同事住这里，可以先向入住同事了解情况，再约看房。</p>
+          <div class="price-strip"><div><small>一居室 / 月租参考</small><strong>3,000+ <span>SAR / 月</span></strong></div><span class="tag">个人提供</span></div>
+          <p class="compact">实际报价按房型、租期、空房情况确认，询问是否包含水电、网络、物业及其他费用。</p>
+          <details><summary>看房时顺手核对<span aria-hidden="true">＋</span></summary><div class="detail-body"><p>看真实房间与通勤路线；确认押金、付款周期、退租规则和维修联系人。可先向住在这里的同事了解使用体验。</p></div></details>
+          <div class="place-footer"><span class="distance" data-distance="yolan">到公司 · 7.3 km / 参考 10 分钟</span><div class="place-buttons"><button type="button" class="map-button" data-map="yolan">地图定位</button><a class="nav-link" data-nav="yolan" href="https://www.google.com/maps/dir/?api=1&amp;origin=24.821698,46.6516289&amp;destination=24.803,46.59625&amp;travelmode=driving" target="_blank" rel="noopener">导航去看房 ↗</a></div></div>
+        </article>
+
+        <footer class="guide-footer"><p><strong>这是一份同事间的落地经验指南。</strong><br>价格、材料、时效与网点状态可能变化；每项保留了官方入口或导航链接，出发前再确认一次。</p><details><summary>查看地图与资料说明<span aria-hidden="true">＋</span></summary><div class="detail-body"><p>地点根据提供的 Google Maps 收藏、STC 原始链接、酒店及银行官方资料核实。公司使用 Windows Office 收藏实体位置，并非旧团建出发定位。</p><p>距离与路线基于 OpenStreetMap / OSRM，于 2026.09.08 计算；为道路模型参考，不是 Google 实时交通数据，不含排队、停车和进出建筑时间。道路单行和掉头会导致往返距离不同。</p><p>机场航站楼与驾照预约网点尚未指定，因此保留对应查询入口。</p><div class="inline-links"><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a><a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM</a><a href="https://www.sab.com/en/personal/ways-to-bank/handicap-branches/" target="_blank" rel="noopener">SAB 分行资料</a></div></div></details><p class="footer-sign">RIYADH FIELD GUIDE <span>2026 / 09</span></p></footer>
+      </section>
+    </div>
+  </main>
+  <nav class="mobile-dock" aria-label="手机快捷导航"><a href="#guide"><span aria-hidden="true">≡</span>办事清单</a><a href="#map-section"><span aria-hidden="true">⌖</span>地点地图</a><a href="https://www.google.com/maps/dir/?api=1&amp;destination=24.821698,46.6516289&amp;travelmode=driving" target="_blank" rel="noopener"><span aria-hidden="true">↗</span>导航回公司</a></nav>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>
